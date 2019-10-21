@@ -8,13 +8,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### Attach packages
-```{r,}
+```{r, message=FALSE}
 library(tidyverse)
 library(DT)
 library(plotly)
 ```
 
-### Create interactive graph with iris data
+### Create interactive graph with iris data and plotly
 ```{r}
 iris_graph <- ggplot(iris,
                      aes(x = Petal.Width,
@@ -26,4 +26,13 @@ iris_graph <- ggplot(iris,
 
 ggplotly(iris_graph)
 ```
+
+
+### Make interactive table using DT and msleep data
+```{r}
+datatable(msleep)
+```
+
+
+
 
